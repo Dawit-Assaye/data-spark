@@ -14,6 +14,11 @@ __pycache__/
 # Streamlit
 .streamlit/
 
+# Deployment
+cloudbuild.yaml
+deploy.sh
+DEPLOYMENT.md
+
 # IDE
 .vscode/
 .idea/
