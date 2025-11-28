@@ -11,7 +11,7 @@ import json
 
 # Page configuration
 st.set_page_config(
-    page_title="InsightSpark - Autonomous Insight Agent",
+    page_title="DataSpark - Autonomous Insight Agent",
     page_icon="✨",
     layout="wide"
 )
@@ -31,7 +31,7 @@ if 'last_narrated' not in st.session_state:
     st.session_state.last_narrated = None
 
 # Header
-st.title("✨ InsightSpark - Autonomous Insight Agent")
+st.title("✨ DataSpark - Autonomous Insight Agent")
 st.markdown("**Your AI-powered data analyst. Upload data, ask questions, get insights.**")
 
 # Sidebar for file upload
@@ -230,5 +230,5 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("**InsightSpark MVP** - Built with Streamlit & Google Gemini API")
+st.markdown("**DataSpark MVP** - Built with Streamlit & Google Gemini API")
 

@@ -1,4 +1,4 @@
-# InsightSpark - Autonomous Insight Agent (MVP)
+# DataSpark - Autonomous Insight Agent (MVP)
 
 An AI-powered data analyst that automates data analysis through natural language queries, automated code generation, and intelligent visualization.
 
@@ -39,7 +39,7 @@ streamlit run app.py
 ## Project Structure
 
 ```
-insightspark/
+dataspark/
 ├── app.py                 # Main Streamlit app
 ├── config/                # Configuration
 ├── src/

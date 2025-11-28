@@ -1,5 +1,5 @@
 # Software Requirements Specification (SRS)
-## InsightSpark - Autonomous Insight Agent (MVP)
+## DataSpark - Autonomous Insight Agent (MVP)
 
 **Version:** 1.0  
 **Date:** [Current Date]  
@@ -11,7 +11,7 @@
 ## 1. Executive Summary
 
 ### 1.1 Purpose
-InsightSpark is an AI-powered autonomous data analyst agent that automates the role of a data analyst. It enables users to upload datasets and receive instant insights through natural language queries, automated code generation, execution, and visualization.
+DataSpark is an AI-powered autonomous data analyst agent that automates the role of a data analyst. It enables users to upload datasets and receive instant insights through natural language queries, automated code generation, execution, and visualization.
 
 ### 1.2 Scope
 This MVP focuses on:
@@ -236,7 +236,7 @@ The system must:
 ## 7. User Interface Design
 
 ### 7.1 Layout
-- **Header:** InsightSpark logo and title
+- **Header:** DataSpark logo and title
 - **Left Sidebar:** File upload section, data profile display
 - **Main Area:** Chat interface for queries, results, visualizations
 - **Right Sidebar (Optional):** Follow-up suggestions, code viewer
