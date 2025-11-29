@@ -11,30 +11,45 @@ An AI-powered data analyst that automates data analysis through natural language
 - 🔄 **Self-Correction**: Automatic error handling and retry
 - 📈 **Auto-Visualization**: Smart chart generation (Bar, Line, Pie)
 - 💡 **Narrative Insights**: AI-generated summaries of findings
+- 🔊 **Voice Narration**: Gemini-powered voice-optimized narratives
 
 ## Quick Start
 
-### 1. Install Dependencies
+### Local Development
 
-```bash
-pip install -r requirements.txt
-```
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 2. Setup Environment
+2. **Setup Environment**
+   Create a `.env` file:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
+   Get your free Gemini API key from [Google AI Studio](https://ai.google.dev)
 
-Create a `.env` file:
+3. **Run Application**
+   ```bash
+   streamlit run app.py
+   ```
 
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-```
+### Deploy to Streamlit Cloud (Recommended)
 
-Get your free Gemini API key from [Google AI Studio](https://ai.google.dev)
+**Easiest deployment option - takes 5 minutes!**
 
-### 3. Run Application
+1. Push your code to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Connect your GitHub repo
+4. Deploy!
 
-```bash
-streamlit run app.py
-```
+See [STREAMLIT_CLOUD_DEPLOYMENT.md](STREAMLIT_CLOUD_DEPLOYMENT.md) for detailed instructions.
+
+### Deploy to Google Cloud Run
+
+For production deployments on GCP:
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed Cloud Run deployment instructions.
 
 ## Project Structure
 
@@ -56,7 +71,7 @@ dataspark/
 2. Review the automatic data profile
 3. Ask questions in natural language
 4. View results, visualizations, and insights
-5. Explore follow-up suggestions
+5. Enable voice narration for audio insights
 
 ## Example Queries
 
@@ -68,12 +83,25 @@ dataspark/
 ## Technology Stack
 
 - **Frontend/Backend**: Streamlit
-- **AI Model**: Google Gemini API
+- **AI Model**: Google Gemini API (gemini-2.5-flash)
 - **Data Processing**: Pandas, NumPy
 - **Visualization**: Plotly
-- **Cloud**: GCP Always Free Tier
+- **Cloud**: Streamlit Cloud (free) or GCP Cloud Run
+
+## Deployment Options
+
+### Option 1: Streamlit Cloud (Recommended)
+- ✅ Free for public apps
+- ✅ Automatic deployments
+- ✅ 5-minute setup
+- 📖 See [STREAMLIT_CLOUD_DEPLOYMENT.md](STREAMLIT_CLOUD_DEPLOYMENT.md)
+
+### Option 2: Google Cloud Run
+- ✅ Always Free Tier available
+- ✅ More control
+- ✅ Private deployments
+- 📖 See [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## License
 
 MIT
-

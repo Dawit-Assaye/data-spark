@@ -12,12 +12,13 @@ __pycache__/
 .Python
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
+# Keep .streamlit/config.toml (it's safe to commit)
 
 # Deployment
-cloudbuild.yaml
-deploy.sh
-DEPLOYMENT.md
+# Note: cloudbuild.yaml and Dockerfile are needed for Cloud Run, so they should be committed
+# deploy.sh
+# DEPLOYMENT.md (optional - can commit if you want)
 
 # IDE
 .vscode/

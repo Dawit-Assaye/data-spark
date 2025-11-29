@@ -3,9 +3,28 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Try to import streamlit for secrets (Streamlit Cloud)
+try:
+    import streamlit as st
+    # Streamlit Cloud uses st.secrets
+    _streamlit_available = True
+except ImportError:
+    _streamlit_available = False
+
 # API Configuration
-# Try to get from environment variable (Cloud Run) or .env file
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+# Priority: Streamlit secrets > Environment variable > .env file
+if _streamlit_available:
+    try:
+        # Try to get API key from Streamlit secrets first, then environment variable
+        # This will raise StreamlitSecretNotFoundError if no secrets.toml exists
+        GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+    except Exception:
+        # If secrets are not available (e.g., in Cloud Run), use environment variable
+        # This catches StreamlitSecretNotFoundError, AttributeError, KeyError, etc.
+        GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+else:
+    # Not in Streamlit environment, use env vars or .env
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
 # Validate API key (only in local development, Cloud Run will have it as env var)
 if not GEMINI_API_KEY:
@@ -26,4 +45,3 @@ MAX_RETRY_ATTEMPTS = 1
 
 # UI Configuration
 CHART_TYPES = ['bar', 'line', 'pie']
-
