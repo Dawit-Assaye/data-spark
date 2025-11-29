@@ -45,11 +45,20 @@ An AI-powered data analyst that automates data analysis through natural language
 
 See [STREAMLIT_CLOUD_DEPLOYMENT.md](STREAMLIT_CLOUD_DEPLOYMENT.md) for detailed instructions.
 
-### Deploy to Google Cloud Run
+### Deploy to Google Cloud Run ✅ **DEPLOYED**
 
-For production deployments on GCP:
+**Status: Successfully deployed and running on GCP Cloud Run**
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed Cloud Run deployment instructions.
+The application is currently live at: **https://dataspark-1005265727570.us-central1.run.app**
+
+**Deployment Details:**
+- ✅ Containerized with Docker
+- ✅ Deployed to Google Cloud Run (us-central1)
+- ✅ Environment variables configured
+- ✅ Publicly accessible
+- ✅ Running on Always Free Tier
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) or [DEPLOY_STEP_BY_STEP.md](DEPLOY_STEP_BY_STEP.md) for detailed deployment instructions.
 
 ## Project Structure
 
@@ -90,17 +99,19 @@ dataspark/
 
 ## Deployment Options
 
-### Option 1: Streamlit Cloud (Recommended)
+### Option 1: Google Cloud Run ✅ **DEPLOYED**
+- ✅ **Successfully deployed and running**
+- ✅ Live URL: https://dataspark-1005265727570.us-central1.run.app
+- ✅ Always Free Tier (2M requests/month)
+- ✅ Containerized with Docker
+- ✅ Production-ready configuration
+- 📖 See [DEPLOY_STEP_BY_STEP.md](DEPLOY_STEP_BY_STEP.md)
+
+### Option 2: Streamlit Cloud (Alternative)
 - ✅ Free for public apps
 - ✅ Automatic deployments
 - ✅ 5-minute setup
 - 📖 See [STREAMLIT_CLOUD_DEPLOYMENT.md](STREAMLIT_CLOUD_DEPLOYMENT.md)
-
-### Option 2: Google Cloud Run
-- ✅ Always Free Tier available
-- ✅ More control
-- ✅ Private deployments
-- 📖 See [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## License
 
